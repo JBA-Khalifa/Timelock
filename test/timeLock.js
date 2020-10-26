@@ -56,10 +56,7 @@ contract('LeadTimelock', (accounts) => {
         
         //third period
         await time.increase(120);
-        await timelock.distributePayment({
-            require(b > 0);
-            c = a / b;
-        });
+        await timelock.distributePayment();
         let balance111 = await erc20.balanceOf(beneficiary1);
         let balance222 = await erc20.balanceOf(beneficiary2);
         let balance333 = await erc20.balanceOf(beneficiary3);
