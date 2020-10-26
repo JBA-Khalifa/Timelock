@@ -62,7 +62,7 @@ contract LeadTimelock {
             percentages[_beneficiary[i]] = _percentages[i];
             totalPercentages = totalPercentages.add(_percentages[i]);
         }
-        require(totalPercentages == 1000, 'Percentages must sum up to 100');
+        require(totalPercentages == 1000, 'Percentages must sum up to 1000');
         for(uint8 i = 0; i < _schedules.length; i++) {
             scheduleList.push(_schedules[i]);
             schedules[i] = now + _schedules[i];
